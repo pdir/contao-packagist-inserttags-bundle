@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 /*
- * AlleAktien Quantitativ bundle for Contao Open Source CMS
+ * Contao Packagist Inserttags Bundle for Contao Open Source CMS
  *
  * Copyright (c) 2021 pdir / digital agentur // pdir GmbH
  *
- * @package    contao-alleaktien-quantitativ-bundle
+ * @package    contao-packagist-inserttags-bundle
  * @link       https://pdir.de/docs/de/contao/extensions/contao-packagist-inserttags-bundle/
  * @license    @license LGPL-3.0-or-later
  * @author     Mathias Arzberger <develop@pdir.de>

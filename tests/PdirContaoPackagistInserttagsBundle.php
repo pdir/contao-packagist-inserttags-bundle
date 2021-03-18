@@ -16,21 +16,17 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Pdir\ContaoPackagistInserttagsBundle\ContaoManager;
+namespace Pdir\ContaoPackagistInserttagsBundle\Tests;
 
-use Contao\CoreBundle\ContaoCoreBundle;
-use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
-use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
-use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use Pdir\ContaoPackagistInserttagsBundle\PdirContaoPackagistInserttagsBundle;
+use PHPUnit\Framework\TestCase;
 
-class Plugin implements BundlePluginInterface
+class PdirContaoPackagistInserttagsBundleTest extends TestCase
 {
-    public function getBundles(ParserInterface $parser)
+    public function testCanBeInstantiated(): void
     {
-        return [
-            BundleConfig::create(PdirContaoPackagistInserttagsBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class]),
-        ];
+        $bundle = new PdirContaoPackagistInserttagsBundle();
+
+        $this->assertInstanceOf('Pdir\ContaoPackagistInserttagsBundle\PdirContaoPackagistInserttagsBundle', $bundle);
     }
 }
