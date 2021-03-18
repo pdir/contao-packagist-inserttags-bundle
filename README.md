@@ -11,3 +11,7 @@ Folgende zwei Möglichkeiten sind implementiert:
 
 ### Rückgabe
 Die Tags liefern eine Zahl ohne weitere Formatierung.
+
+### GitHub
+https://github.com/pdir/contao-packagist-inserttags-bundle
+

@@ -6,10 +6,6 @@
     "license": "LGPL-3.0-or-later",
     "authors": [
         {
-            "name": "Packagist",
-            "homepage": "https://packagist.de"
-        },
-        {
             "name": "pdir GmbH",
             "homepage": "https://pdir.de"
         }
