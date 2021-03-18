@@ -30,6 +30,8 @@ class ContaoPackagistInserttagsBundleInsertTagListener
 
     public function __invoke(string $tag)
     {
+dump('OK');
+die();
         $chunks = explode('::', $tag);
 
         if (self::TAG !== $chunks[0]) {
