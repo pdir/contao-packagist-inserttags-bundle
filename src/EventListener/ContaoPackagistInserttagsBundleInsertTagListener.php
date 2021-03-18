@@ -64,6 +64,6 @@ class ContaoPackagistInserttagsBundleInsertTagListener
                 return false;
         }
 
-	    return "<div class='pitb-plugin' style='width:inherit;margin:auto'>$chunk3: $result</div>";
+	    return $result;
     }
 }
