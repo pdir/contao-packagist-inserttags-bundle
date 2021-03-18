@@ -25,35 +25,45 @@ use Contao\CoreBundle\ServiceAnnotation\Hook;
  */
 class ContaoPackagistInserttagsBundleInsertTagListener
 {
-    #{{github::pdir/maklermodul::downloads}}
-    public const TAG = 'github';
+    private const TAG = 'github';
 
     public function __invoke(string $tag)
     {
-dump('OK');
-die();
-        $chunks = explode('::', $tag);
+        // we have only 3 chunks
+        [$chunk1, $chunk2, $chunk3] = explode('::', $tag);
 
-        if (self::TAG !== $chunks[0]) {
-            return false;
+        if (self::TAG !== $chunk1) return false;
+
+        if (!$chunk2) return false;
+
+        $json = json_decode(file_get_contents("https://packagist.org/search.json?q=$chunk2"));
+        /* json response
+        {#887 ▼
+            +"results": array:1 [▼
+            0 => {#886 ▼
+            +"name": "pdir/maklermodul-bundle"
+            +"description": "maklermodul for Contao 4"
+            +"url": "https://packagist.org/packages/pdir/maklermodul-bundle"
+            +"repository": "https://github.com/pdir/maklermodul-bundle"
+            +"downloads": 739
+            +"favers": 4
+            }
+          ]
+          +"total": 1
+        }
+        */
+
+        switch($chunk3) {
+            case 'downloads':
+                $result = $json->results[0]->downloads;
+                break;
+            case 'likes':
+                $result = $json->results[0]->favers;
+                break;
+            default:
+                return false;
         }
 
-        if (!$chunks[1]) {
-            return false;
-        }
-
-        if (!$chunks[2]) {
-            $chunks[2] = 'QuoteChart';
-        }
-
-        $isin = $chunks[1];
-        $chart = $chunks[2];
-
-        // render html output
-	    $html = <<<HTML
-OK läuft
-HTML;
-
-	    return "<div class='pitb-plugin' style='width:inherit;margin:auto'>" . $html . "</div>";
+	    return "<div class='pitb-plugin' style='width:inherit;margin:auto'>$chunk3: $result</div>";
     }
 }
