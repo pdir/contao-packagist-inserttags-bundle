@@ -1,0 +1,6 @@
+services:
+    _defaults:
+        autoconfigure: true
+
+    Pdir\ContaoPackagistInserttagsBundle\EventListener\ContaoPackagistInserttagsBundleInsertTagListener:
+        public: true
