@@ -9,8 +9,8 @@ Folgende zwei Afragen sind z.Zt. implementiert:
 ### 2. Holen der 'likes'
 {{github::pdir/maklermodul::likes}}
 
-### Rückgabe
-Die Tags liefern eine Zahl ohne weitere Formatierung.
+### Rückgabewert
+Die Tags liefern eine Zahl mit Tausenderpunkt.
 
 ### GitHub
 https://github.com/pdir/contao-packagist-inserttags-bundle
