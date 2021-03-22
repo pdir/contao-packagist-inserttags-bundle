@@ -1,7 +1,7 @@
 # Contao Packagist Inserttags Bundle
 ### Funktion
 Dieses einfache Bundle stellt zwei Inserttags zur Abfrage der packagist-json-API bereit.
-Folgende zwei Afragen sind z.Zt. implementiert:
+Folgende zwei Abfragen sind z.Zt. implementiert:
 
 ### 1. Holen der 'downloads'
 {{github::pdir/maklermodul::downloads}}
