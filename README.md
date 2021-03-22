@@ -10,7 +10,7 @@ Folgende zwei Afragen sind z.Zt. implementiert:
 {{github::pdir/maklermodul::likes}}
 
 ### Rückgabewert
-Die Tags liefern eine Zahl mit Tausenderpunkt.
+Die Tags liefern eine Zahl mit lokalisierter Formatierung.
 
 ### GitHub
 https://github.com/pdir/contao-packagist-inserttags-bundle
