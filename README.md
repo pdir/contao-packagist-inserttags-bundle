@@ -1,7 +1,7 @@
 # Contao Packagist Inserttags Bundle
 ### Funktion
 Dieses einfache Bundle stellt zwei Inserttags zur Abfrage der packagist-json-API bereit.
-Folgende zwei Afragen sind z.Zt. implementiert:
+Folgende zwei Abfragen sind z.Zt. implementiert:
 
 ### 1. Holen der 'downloads'
 {{packagist::pdir/maklermodul::downloads}}
@@ -9,8 +9,8 @@ Folgende zwei Afragen sind z.Zt. implementiert:
 ### 2. Holen der 'likes'
 {{packagist::pdir/maklermodul::likes}}
 
-### Rückgabe
-Die Tags liefern eine Zahl ohne weitere Formatierung.
+### Rückgabewert
+Die Tags liefern eine Zahl mit lokalisierter Formatierung.
 
 ### GitHub
 https://github.com/pdir/contao-packagist-inserttags-bundle

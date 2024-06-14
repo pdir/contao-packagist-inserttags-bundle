@@ -19,6 +19,8 @@ declare(strict_types=1);
 namespace Pdir\ContaoPackagistInserttagsBundle\EventListener;
 
 use Contao\CoreBundle\ServiceAnnotation\Hook;
+use Contao\System;
+
 
 /**
  * @Hook("replaceInsertTags")
@@ -55,10 +57,10 @@ class ContaoPackagistInserttagsBundleInsertTagListener
 
         switch($chunk3) {
             case 'downloads':
-                $result = $json->results[0]->downloads;
+                $result = System::getFormattedNumber(intval($json->results[0]->downloads), 0);
                 break;
             case 'likes':
-                $result = $json->results[0]->favers;
+                $result = System::getFormattedNumber(intval($json->results[0]->favers), 0);
                 break;
             default:
                 return false;
