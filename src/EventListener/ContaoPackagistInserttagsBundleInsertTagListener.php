@@ -25,12 +25,12 @@ use Contao\CoreBundle\ServiceAnnotation\Hook;
  */
 class ContaoPackagistInserttagsBundleInsertTagListener
 {
-    private const TAG = 'github';
+    private const TAG = 'packagist';
 
     public function __invoke(string $tag)
     {
         // we have only 3 chunks
-        [$chunk1, $chunk2, $chunk3] = explode('::', $tag);
+        @[$chunk1, $chunk2, $chunk3] = explode('::', $tag);
 
         if (self::TAG !== $chunk1) return false;
 
@@ -64,6 +64,6 @@ class ContaoPackagistInserttagsBundleInsertTagListener
                 return false;
         }
 
-	    return $result;
+        return $result;
     }
 }

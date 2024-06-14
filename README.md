@@ -4,10 +4,10 @@ Dieses einfache Bundle stellt zwei Inserttags zur Abfrage der packagist-json-API
 Folgende zwei Afragen sind z.Zt. implementiert:
 
 ### 1. Holen der 'downloads'
-{{github::pdir/maklermodul::downloads}}
+{{packagist::pdir/maklermodul::downloads}}
 
 ### 2. Holen der 'likes'
-{{github::pdir/maklermodul::likes}}
+{{packagist::pdir/maklermodul::likes}}
 
 ### Rückgabe
 Die Tags liefern eine Zahl ohne weitere Formatierung.
