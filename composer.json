@@ -14,9 +14,9 @@
     "require": {
         "php": "^7.2 || ^8.0",
         "contao/core-bundle": "^4.9 || ^5.3",
-        "symfony/config": "^4.4 || ^5.1",
-        "symfony/dependency-injection": "^4.4 || ^5.1",
-        "symfony/http-kernel": "^4.4 || ^5.1"
+        "symfony/config": "^4.4 || ^5.1 || ^6.4",
+        "symfony/dependency-injection": "^4.4 || ^5.1 || ^6.4",
+        "symfony/http-kernel": "^4.4 || ^5.1 || ^6.4"
     },
     "conflict": {
         "contao/manager-plugin": "<2.0 || >=3.0"
